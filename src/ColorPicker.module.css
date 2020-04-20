@@ -1,0 +1,52 @@
+.pickerContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.picker {
+  display: flex;
+  flex-direction: row;
+}
+
+.swatch {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+
+.swatch:hover {
+  outline: 0.1vw solid darkgray;
+}
+
+@media screen and (max-width: 1080px) {
+  .swatch {
+    width: 5vw;
+    height: 5vw;
+    margin: 0.5vw;
+  }
+  .swatch:hover {
+    outline: 0.25vw solid darkgray;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .swatch {
+    width: 6vw;
+    height: 6vw;
+    margin: 0.5vw;
+  }
+  .swatch:hover {
+    outline: 0.5vw solid darkgray;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .swatch {
+    width: 7vw;
+    height: 7vw;
+    margin: 0.75vw;
+  }
+  .swatch:hover {
+    outline: 0.5vw solid darkgray;
+  }
+}

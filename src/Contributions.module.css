@@ -1,0 +1,64 @@
+.grid {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.cell {
+  width: 1.35vw;
+  height: 1.35vw;
+  margin: 0.1vw;
+  position: relative;
+  display: inline-block;
+}
+
+.cell:hover {
+  outline: 0.1vw solid darkgray;
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 9vw;
+  background-color: darkgray;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.1vw;
+  position: absolute;
+  bottom: 175%;
+  left: -4.5vw;
+  padding: 0.1vw;
+  z-index: 10;
+  font-size: 1.5vw;
+}
+
+.cell:hover .tooltip {
+  visibility: visible;
+}
+
+@media screen and (max-width: 768px) {
+  .tooltip {
+    width: 12vw;
+    left: -6vw;
+    font-size: 2vw;
+  }
+  .cell:hover {
+    outline: 0.2vw solid darkgray;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cell {
+    width: 4vw;
+    height: 4vw;
+    margin: 0.3vw;
+  }
+  .tooltip {
+    width: 24vw;
+    left: -12vw;
+    font-size: 3vw;
+  }
+}

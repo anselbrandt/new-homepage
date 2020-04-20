@@ -1,0 +1,163 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container {
+  height: 70vh;
+  width: 100vw;
+  position: relative;
+}
+
+.grey {
+  composes: container;
+  background: linear-gradient(
+      315deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(315deg, #dce1e5 0%, #b8c2cc 100%);
+}
+.red {
+  composes: container;
+  background: linear-gradient(
+      315deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(315deg, #f29a98 0%, #e3332e 100%);
+}
+.orange {
+  composes: container;
+  background: linear-gradient(
+      315deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(315deg, #fbcca0 0%, #f7993e 100%);
+}
+.yellow {
+  composes: container;
+  background: linear-gradient(
+      315deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(315deg, #fef6a5 0%, #ffee49 100%);
+}
+.green {
+  composes: container;
+  background: linear-gradient(
+      315deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(315deg, #9ce0b9 0%, #38c173 100%);
+}
+.cyan {
+  composes: container;
+  background: linear-gradient(
+      315deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(315deg, #a5e0da 0%, #4cc0b5 100%);
+}
+.blue {
+  composes: container;
+  background: linear-gradient(
+      315deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(315deg, #9bc8ef 0%, #3490dd 100%);
+}
+.violet {
+  composes: container;
+  background: linear-gradient(
+      315deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(315deg, #b2bbe6 0%, #6574cd 100%);
+}
+.purple {
+  composes: container;
+  background: linear-gradient(
+      315deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(315deg, #cab0f1 0%, #9560e2 100%);
+}
+.pink {
+  composes: container;
+  background: linear-gradient(
+      315deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(315deg, #fbb5cd 0%, #f66d9b 100%);
+}
+
+.dark {
+  composes: container;
+  background-color: black;
+}
+
+.menuContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.menu {
+  width: 40vw;
+  height: 5vh;
+}
+
+.overlayContainer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 2000px) {
+  .overlayContainer {
+    height: 20vh;
+  }
+}
+
+@media screen and (max-width: 1680px) {
+  .overlayContainer {
+    height: 15vh;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .overlayContainer {
+    height: 20vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .overlayContainer {
+    height: 20vh;
+  }
+}
