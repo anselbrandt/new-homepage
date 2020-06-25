@@ -3,20 +3,22 @@ import styles from "./App.module.css";
 import Map from "./Map";
 import ColorPicker from "./ColorPicker";
 import Contributions from "./Contributions";
-import getContributions from "./getContributions";
-import useFetchContributions from "./useFetchContributions";
+// import getContributions from "./getContributions";
+// import useFetchContributions from "./useFetchContributions";
 import useGetViewport from "./useGetViewport";
 
+import data from "./contributions.json";
+
 function App() {
-  const [query, setQuery] = useState(getContributions);
-  const [variables, setVariables] = useState();
+  // const [query, setQuery] = useState(getContributions);
+  // const [variables, setVariables] = useState();
   const [time, setTime] = useState(0);
   const [viewState, setViewState] = useState();
   const [theme, setTheme] = useState("grey");
   const [themeIndex, setThemeIndex] = useState("0");
   const [darkMode, setDarkMode] = useState(false);
 
-  const { results } = useFetchContributions(query, variables);
+  // const { results } = useFetchContributions(query, variables);
   const { width } = useGetViewport();
 
   useEffect(() => {
@@ -91,7 +93,7 @@ function App() {
         </div>
         <div className={styles.overlayContainer}>
           <Contributions
-            results={results}
+            results={data}
             width={width}
             theme={theme}
             darkMode={darkMode}

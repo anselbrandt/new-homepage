@@ -1,13 +1,13 @@
 import React from "react";
-import { StaticMap } from "react-map-gl";
+// import { StaticMap } from "react-map-gl";
 import { DeckGL, TripsLayer } from "deck.gl";
 import trips from "./trips.json";
 import { darkPalette } from "./swatchColors";
 
-const MAPBOX_ACCESS_TOKEN = process.env.MAPBOX_ACCESS_TOKEN;
+// const MAPBOX_ACCESS_TOKEN = process.env.MAPBOX_ACCESS_TOKEN;
 
 export default function Map(props) {
-  const { time, handleViewStateChange, darkMode, themeIndex } = props;
+  const { time, handleViewStateChange, themeIndex } = props;
 
   const hexToRgb = (hex) => {
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);

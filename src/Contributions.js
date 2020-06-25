@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Contributions.module.css";
-import { lightPalette, darkPalette, defaults } from "./swatchColors";
+import { lightPalette, darkPalette } from "./swatchColors";
 
 export default function Contributions(props) {
   const { results, width, theme, darkMode } = props;
@@ -60,7 +60,7 @@ export default function Contributions(props) {
                 } else {
                   if (index > 32) {
                     return week;
-                  }
+                  } else return null;
                 }
               })
               .map((week, index) => {
