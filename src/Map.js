@@ -1,13 +1,13 @@
 import React from "react";
-// import { StaticMap } from "react-map-gl";
+import { StaticMap } from "react-map-gl";
 import { DeckGL, TripsLayer } from "deck.gl";
 import trips from "./trips.json";
 import { darkPalette } from "./swatchColors";
 
-// const MAPBOX_ACCESS_TOKEN = process.env.MAPBOX_ACCESS_TOKEN;
+const MAPBOX_ACCESS_TOKEN = process.env.MAPBOX_ACCESS_TOKEN;
 
 export default function Map(props) {
-  const { time, handleViewStateChange, themeIndex } = props;
+  const { time, handleViewStateChange, darkMode, themeIndex } = props;
 
   const hexToRgb = (hex) => {
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -50,10 +50,17 @@ export default function Map(props) {
         width={"100vw"}
         height={"70vh"}
       >
-        {/* <StaticMap
-          mapStyle={"mapbox://styles/mappingmtl/ck96f2n00061e1io8c6q5z9im"}
-          mapboxApiAccessToken={MAPBOX_ACCESS_TOKEN}
-        /> */}
+        {darkMode ? (
+          <StaticMap
+            mapStyle={"mapbox://styles/mappingmtl/ck87roalx0h3n1jp72b1hgun4"}
+            mapboxApiAccessToken={MAPBOX_ACCESS_TOKEN}
+          />
+        ) : (
+          <StaticMap
+            mapStyle={"mapbox://styles/mappingmtl/ck96f2n00061e1io8c6q5z9im"}
+            mapboxApiAccessToken={MAPBOX_ACCESS_TOKEN}
+          />
+        )}
       </DeckGL>
     </div>
   );
